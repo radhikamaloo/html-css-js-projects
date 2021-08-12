@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poopins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poopins',sans-serif;
+}
+body{
+    overflow: hidden;
+    color: #fff;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1c1c25;
+    height: 100vh;
+}
+section::before , .card::before{
+content: '';
+position: absolute;
+width: 170px;
+height: 170px;
+background: linear-gradient(#f00 ,#f0f);
+border-radius: 50%;
+}
+.face h3{
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 100px;
+}
+.icon-content{
+    font-size: 14px;
+}
+h3{
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+section::before{
+    top: 3%;
+    left: 55%;
+}
+
+.card::before{
+    bottom: 2%;
+    left:31%;
+    background: linear-gradient(#0098f0, #0457d3);
+}
+
+.face{
+    width: 250px;
+    height: 485px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+    background-color: rgba(255, 255, 255, .05);
+    filter: blur(.2px);
+    border-width: .1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.425);
+}
+.slide-content{
+    width: 120px;
+    height: 15px;
+    padding: 12px 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+    background-color: rgba(255, 255, 255, .05);
+    text-align: center;
+    margin: 30px auto;
+    cursor: pointer;
+}
+.face h6{
+    font-weight: 300;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 1px;}
+.icon-content{
+        margin-top: 180px;
+        padding: 0 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+ .icon-content i{
+        font-size: 14px;
+        
+    }
+    h5{
+        font-weight: 400;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
