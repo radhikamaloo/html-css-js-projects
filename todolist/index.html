@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Open Sans', sans-serif;
+        background: rgb(247, 108, 108);
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .container {
+        background: #fff;
+        padding: 15px;
+        box-shadow: #fff;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-gap: 8px;
+        margin-top: 20px;
+    }
+
+    #listitem {
+        border: 0;
+        border-bottom: 2px solid #000;
+        outline: none;
+        transition: .15s;
+        list-style-type: none;
+    }
+
+    #listitem:focus {
+        border-bottom: 2px solid rgb(255, 68, 68);
+    }
+
+    #add {
+        border: 0;
+        background: rgb(255, 68, 68);
+        color: #fff;
+        padding: 8px 16px;
+        cursor: pointer;
+    }
+
+    #list {
+        list-style-type: none;
+        margin-top: 20px;
+    }
+
+    li {
+        position: relative;
+        padding: 8px;
+        font-size: 16px;
+        transition: .1s;
+    }
+
+    li:nth-child(odd) {
+        background: rgb(255, 226, 226);
+    }
+
+    li:hover {
+        background: rgb(255, 168, 168);
+    }
+
+    .close {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        display: inline-block;
+        padding: 9px;
+        border: 0;
+        background: transparent;
+    }
+
+    .close:hover {
+        background: rgb(255, 68, 68);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h2>To Do List</h2>
+        <form action="">
+            <input type="text" id="listitem" autocomplete="off" placeholder="List item">
+            <button id="add">Add</button>
+        </form>
+        <ul id="list"></ul>
+    </div>
+
+
+    <script>
+        let add = document.querySelector('#add');
+        let list = document.querySelector('#list');
+        add.onclick = (e) => {
+            e.preventDefault();
+            let listitem = document.querySelector('#listitem');
+
+            if(listitem.value !== 0)
+            {
+                let el = document.createElement('li');
+                el.innerHTML = listitem.value;
+                let removebtn = document.createElement('button');
+                removebtn.className = "close";
+                removebtn.innerHTML = "\u00D7";
+                el.appendChild(removebtn);
+                list.appendChild(el);
+                listitem.value = "";
+                el.addEventListener("click" , (e) => {
+                    e.target.style.textDecoration = "line-through";
+                })
+                removebtn.addEventListener("click" , (e) => {
+                    e.target.parentElement.style.display = "none";
+                });
+            }
+            else{
+                alert("No input\n Write something!!")
+            }
+        }
+
+
+
+        
+
+  </script>
+</body>
+
+</html>
