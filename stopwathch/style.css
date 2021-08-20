@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inconsolate', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #020100;
+}
+.time {
+    font-size: 3.5em;
+    color: rgb(0, 248, 0);
+    margin: 10px;
+}
+.button{
+    margin: 60px;
+}
+#start,#reset,#stop{
+    border-radius: 25px;
+    font-size: 1rem;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: rgb(0, 248, 0);
+    border-color: rgb(0, 248, 0);;
+}
+.blink-colon{
+    animation: blink 1s infinte linear  ;
+}
+@keyframes blink {
+    0% , 100%{
+        opacity: 1;
+    }
+    30%{
+        opacity: 0.4;
+    }
+}
+.container{
+    border:5px solid rgb(0, 248, 0);
+    padding:160px 80px;
+    border-radius: 50%;
+    height: 550px;
+    background: transparent;
+    box-shadow:
+    0 0 5px rgb(0, 240, 0)
+    0 0 10px rgb(0, 240, 0)
+    0 0 15px rgb(0, 240, 0);
+}
